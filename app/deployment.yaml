@@ -18,22 +18,22 @@ metadata:
   name: demosite
   labels:
     app: demosite
-    version: blue
+    version: green
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: demosite
-      version: blue
+      version: green
   template:
     metadata:
       labels:
         app: demosite
-        version: blue
+        version: green
     spec:
       containers:
       - name: demosite
-        image: fabioandreola/demosite:blue
+        image: fabioandreola/demosite:green
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
