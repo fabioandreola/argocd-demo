@@ -24,7 +24,6 @@ spec:
   selector:
     matchLabels:
       app: demosite
-      version: green
   template:
     metadata:
       labels:
