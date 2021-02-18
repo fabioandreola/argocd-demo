@@ -29,10 +29,10 @@ kubectl port-forward -n argocd svc/argocd-server 8080:80
 
 3. Log in using the admin/ _argo server pod name_
 
-### Create application in argo
+### Create app of apps in argo
 
 ```
-kubectl apply -f 03-argocd-application.yaml
+./03-argocd-application.yaml
 ```
 
 ### Confirm application is deployed

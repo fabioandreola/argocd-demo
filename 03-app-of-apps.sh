@@ -1,14 +1,17 @@
+#!/bin/sh
+
+cat <<EOF | kubectl apply -f - 
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demosite-app
+  name: applications
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/fabioandreola/argocd-demo.git
     targetRevision: HEAD
-    path: app
+    path: argocd-apps
     directory:
       recurse: true
   destination:
@@ -17,4 +20,5 @@ spec:
   syncPolicy:
     automated:
       prune: true
-      selfHeal: false
+      selfHeal: true
+EOF
