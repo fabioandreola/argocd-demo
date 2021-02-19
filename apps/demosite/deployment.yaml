@@ -8,6 +8,7 @@ metadata:
 spec:
   ports:
   - port: 3000
+    targetPort: 80
     name: http
   selector:
     app: demosite
@@ -35,4 +36,4 @@ spec:
         image: fabioandreola/demosite:prod
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 80
